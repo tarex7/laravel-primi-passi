@@ -14,10 +14,9 @@
             <div class="logo"><strong>LOGO</strong></div>
             <div class="menu">
                 <ul class="list-unstyled d-flex">
-                    <li><a class="text-decoration-none mx-2 text-dark" href="{{ url('/home') }}">{{ $home }}</a></li>
-                    <li><a class="text-decoration-none mx-2 text-dark" href="{{ url('/contact') }}">{{ $contact }}</a></li>
-                    <li><a class="text-decoration-none mx-2 text-dark" href="{{ url('/about') }}">{{ $about }}</a></li>
-                    <li><a class="text-decoration-none mx-2 text-dark" href="{{ url('/blog') }}">{{ $blog }}</a></li>
+                @foreach ($menu as $key=>$link)
+                    <li><a class="text-decoration-none mx-2 text-dark" href="{{ $key }}">{{ $link }}</a></li>
+                    @endforeach
                 </ul>
             </div>
         </div>
